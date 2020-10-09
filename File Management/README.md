@@ -28,8 +28,19 @@ tar -cf create_database.tar ejemplo.sql tarea2.sql
 
 <img src="../statics/tar-cf.png" />
 
+Como podemos ver en la salida nos crea un archivo .tar y las opciones que usamos son:
+
+- c : Crea un nuevo archivo (contenedor) de dos archivos sql
+- f : Usa el archivo o contenedor para escribir.
+
 Extraer:
 ```sh
 tar -xf create_database.tar
 ```
 
+<img src="../statics/tar-cf.png" />
+
+En la salida podemos ver que nos deja los dos archivos que habiamos compactado.
+
+- x : Extrae archivos a partir de un contenedor o archivo tar.
+- f : Usa el archivo o contenedor para leer.
