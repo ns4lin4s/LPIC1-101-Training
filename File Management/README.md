@@ -44,3 +44,37 @@ En la salida podemos ver que nos deja los dos archivos que habiamos compactado.
 
 - x : Extrae archivos a partir de un contenedor o archivo tar.
 - f : Usa el archivo o contenedor para leer.
+
+Comprimir:
+```sh
+tar -czf create_database.tar.gz ejemplo.sql tarea2.sql
+```
+
+<img src="../statics/tar-czf.png" />
+
+Acá podemos ver claramente la diferencia de tamaños, en donde primero se comprimen los dos archivos y luego, listamos con el comando *ls -lh* (la opción -l es para listar y la opción -h le da formato al tamaño de los archivos ej: 1K, 234M 2G).
+
+Es importante la diferencia que tenemos con el comando *tar -cf* ya que éste no comprime, sólo junta los archivos o directorios que nosotros le indicamos como origen.
+
+Descomprimir un archivo tar.gz:
+```sh
+tar -xzf create_database.tar.gz
+```
+
+<img src="../statics/tar-xzf.png" />
+
+Primero eliminamos los archivos sql que teníamos, para finalmente ver el resultado del comando *tar -xzf* :
+
+Las opciones son:
+
+- -x: Extrae los archivos
+- -z: Algortimo de descompresión gunzip
+- -f: El fichero, que en nuestro caso es *create_database.tar.gz*
+
+También podemos visualizar, que es lo que hace el comando con la opción -v
+
+```sh
+tar -xzvf create_database.tar.gz
+```
+
+<img src="../statics/tar-verbose.png" />
